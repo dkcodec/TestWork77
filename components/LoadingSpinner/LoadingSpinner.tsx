@@ -1,7 +1,7 @@
 import { Spinner } from 'react-bootstrap'
 import styles from '@/styles/LoadingSpinner.module.scss'
 
-export default function LoadingSpinner() {
+const LoadingSpinner = () => {
   return (
     <div className={styles.spinnerContainer}>
       <Spinner animation='border' role='status'>
@@ -10,3 +10,5 @@ export default function LoadingSpinner() {
     </div>
   )
 }
+
+export default LoadingSpinner

@@ -1,0 +1,35 @@
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #0056b3;
+  --card-bg: #fff;
+  --border-color: #dee2e6;
+  --text-error-color: red;
+  --blue: #0056b3;
+}
+
+[data-theme='dark'] {
+  --bg-color: #001529;
+  --text-color: #f8f9fa;
+  --card-bg: #495057;
+  --border-color: #6c757d;
+  --text-error-color: red;
+  --blue: #0056b3;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.list-group-item {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}

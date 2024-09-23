@@ -1,0 +1,52 @@
+.forecastContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem; // Разделение между элементами
+  padding: 2rem;
+  background-color: #f8f9fa; // Легкий фон для контейнера
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecastItem {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px); // Легкий подъем при наведении
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  p:first-child {
+    font-weight: bold;
+    color: #007bff; // Цвет даты
+  }
+
+  p:last-child {
+    font-style: italic;
+    color: #6c757d; // Цвет описания погоды
+  }
+
+  .temp {
+    font-size: 1.5rem;
+    color: #ff5733; // Цвет температуры
+  }
+
+  .weatherIcon {
+    margin: 0.5rem 0;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

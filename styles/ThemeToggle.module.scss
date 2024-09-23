@@ -1,0 +1,13 @@
+.themeToggleForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeToggleSwitch {
+  input[type='checkbox'] {
+    height: 1.3rem;
+    width: 2.8rem;
+    margin-right: 20px;
+  }
+}

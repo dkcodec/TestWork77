@@ -4,8 +4,9 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Form, Button } from 'react-bootstrap'
 import styles from '@/styles/SearchForm.module.scss'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
-export default function SearchForm() {
+const SearchForm = () => {
   const [city, setCity] = useState<string>('')
   const router = useRouter()
 
@@ -26,8 +27,11 @@ export default function SearchForm() {
         />
       </Form.Group>
       <Button variant='primary' type='submit' className={styles.button}>
-        Search
+        <span className={styles.buttonText}>Search</span>
+        <i className={`bi bi-search ${styles.icon}`} aria-hidden='true'></i>
       </Button>
     </Form>
   )
 }
+
+export default SearchForm

@@ -13,6 +13,9 @@ const nextConfig = {
       path.join(__dirname, 'node_modules'),
     ],
   },
+  images: {
+    domains: ['openweathermap.org'],
+  },
 }
 
 export default nextConfig

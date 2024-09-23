@@ -17,7 +17,7 @@ export default function FavoritesList() {
           {favoritesCities.map((city) => (
             <ListGroup.Item
               key={city}
-              className='d-flex justify-content-between align-items-center'
+              className='d-flex justify-content-between align-items-center mb-3'
             >
               <Link href={`/forecast/${city}`} className={styles.cityLink}>
                 {city}

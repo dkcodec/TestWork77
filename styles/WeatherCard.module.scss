@@ -1,0 +1,28 @@
+.weatherCard {
+  display: grid;
+  margin: 20px;
+
+  .temperature {
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  .favoriteButton {
+    color: var(--text-color);
+
+    &:hover {
+      background-color: var(--blue);
+      color: white;
+    }
+  }
+
+  .favoriteButtonRemove {
+    color: var(--text-error-color);
+    border: 1px solid var(--text-error-color);
+
+    &:hover {
+      background-color: red;
+      color: white;
+    }
+  }
+}
