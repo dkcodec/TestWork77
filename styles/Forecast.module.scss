@@ -1,12 +1,29 @@
 .forecastContainer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem; // Разделение между элементами
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   padding: 2rem;
-  background-color: #f8f9fa; // Легкий фон для контейнера
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dayContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.dayHeader {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #007bff;
+  grid-column: span 2;
+  margin-bottom: 1rem;
+}
+
+.dayForecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
 }
 
 .forecastItem {
@@ -15,12 +32,11 @@
   border-radius: 0.5rem;
   padding: 1rem;
   text-align: center;
-  width: 150px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 
   &:hover {
-    transform: translateY(-5px); // Легкий подъем при наведении
+    transform: translateY(-5px);
   }
 
   p {
@@ -29,17 +45,26 @@
 
   p:first-child {
     font-weight: bold;
-    color: #007bff; // Цвет даты
+    color: #007bff;
   }
 
   p:last-child {
     font-style: italic;
-    color: #6c757d; // Цвет описания погоды
+    color: #6c757d;
   }
 
-  .temp {
+  .temp,
+  .humidity,
+  .wind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
-    color: #ff5733; // Цвет температуры
+    color: #6c757d;
+
+    img {
+      margin-left: 0.5rem;
+    }
   }
 
   .weatherIcon {
