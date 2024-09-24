@@ -45,8 +45,6 @@ const WeatherCard: React.FC<WeatherCardProps> = (props) => {
   if (error) return <div className='alert alert-danger'>{error}</div>
   if (!weather) return null
 
-  console.log(weather)
-
   return (
     <Card className={styles.weatherCard}>
       <Card.Body onClick={handleFullWeather}>

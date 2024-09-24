@@ -5,7 +5,6 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 
 export const getWeatherByCity = async (city: string) => {
   try {
-    console.log('BASE_URL:', BASE_URL)
     const resoponse = await axios.get(`${BASE_URL}/weather`, {
       params: {
         q: city,

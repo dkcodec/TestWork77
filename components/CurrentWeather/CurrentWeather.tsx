@@ -1,5 +1,5 @@
 import styles from '@/styles/CurrentWeather.module.scss'
-import WeatherCard from '../WeatherCard/WeatherCard'
+import WeatherCard from '@/components/WeatherCard/WeatherCard'
 
 // можно из апишки например какие-то популярные города вытягивать и отображать их погоду
 const popularCities = ['Astana', 'Moscow', 'New York', 'Tokyo', 'London']

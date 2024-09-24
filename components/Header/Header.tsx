@@ -5,6 +5,7 @@ import ThemeToggle from '@/components/ThemeToggle/ThemeToggle'
 import WeatherIcon from '@/public/weatherIcon.svg'
 import Links from './Links'
 import { useRouter } from 'next/navigation'
+import styles from '@/styles/Header.module.scss'
 
 const Header: React.FC = () => {
   const router = useRouter()
@@ -14,8 +15,8 @@ const Header: React.FC = () => {
   }
 
   return (
-    <header className='container'>
-      <div className='d-flex justify-content-between align-items-center mb-4'>
+    <header className={`${styles.container} container`}>
+      <div className={styles.header}>
         <h1 className='d-flex align-items-center' onClick={handleHome}>
           AbeloHost
           <Image src={WeatherIcon} alt='weatherIcon' width={80} height={80} />

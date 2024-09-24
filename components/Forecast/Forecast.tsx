@@ -48,8 +48,6 @@ const Forecast = ({ city }: { city: string }) => {
   if (error) return <div className='alert alert-danger'>{error}</div>
   if (!forecast) return null
 
-  console.log(forecast)
-
   const groupedForecast = groupForecastByDay(forecast.list)
 
   return (
@@ -84,6 +82,7 @@ const Forecast = ({ city }: { city: string }) => {
                     alt={item.weather[0].description}
                     width={50}
                     height={50}
+                    priority
                   />
                 </div>
                 <p>{item.weather[0].description}</p>

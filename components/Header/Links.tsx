@@ -9,10 +9,8 @@ const Links: React.FC = () => {
     <nav className={styles.navigation}>
       <ul className={styles.ul}>
         {links.map((link) => (
-          <li>
-            <Link key={link} href={`/${link}`}>
-              {link}
-            </Link>
+          <li key={link}>
+            <Link href={`/${link}`}>{link}</Link>
           </li>
         ))}
       </ul>
