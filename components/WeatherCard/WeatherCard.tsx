@@ -30,6 +30,7 @@ const WeatherCard: React.FC<WeatherCardProps> = (props) => {
         setWeather(data)
       } catch (err) {
         setError('Failed to fetch weather data')
+        console.error(err)
       } finally {
         setLoading(false)
       }

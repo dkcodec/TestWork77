@@ -37,6 +37,7 @@ const Forecast = ({ city }: { city: string }) => {
         setForecast(data)
       } catch (err) {
         setError('Failed to fetch forecast data')
+        console.error(err)
       } finally {
         setLoading(false)
       }
